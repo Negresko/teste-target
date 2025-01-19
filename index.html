@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Target</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="questoes.js"></script>
+</head>
+
+<body>
+    <div class="boxButtonCentro">
+        <div class="box">
+            <div class="buttonDiv">
+                <button onclick="questao1()">Questão 1</button>
+
+                <button onclick="questao3()">Questão 3</button>
+
+                <button onclick="questao4()">Questão 4</button>
+            </div>
+            <div class="buttonInputDiv">
+                <button onclick="questao2()">Questão 2</button>
+                <input placeholder="Digite um número" type="number" id="inputFibonacci">
+
+                <button onclick="questao5()">Questão 5</button>
+                <input placeholder="Digite uma string" type="text" id="inputInverteString">
+            </div>
+        </div>
+    </div>
+    <div class="boxResultsCentro">
+        <p id="resultado">
+        </p>
+    </div>
+</body>
+
+</html>
