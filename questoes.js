@@ -31,29 +31,25 @@ function questao1() {
 
 function questao2() {
     let numero1 = 0, numero2 = 1;
-    let numeroEscolhido = (document.getElementById('inputFibonacci').value);
-    let resposta = "";
+    let numeroEscolhido = parseInt(document.getElementById('inputFibonacci').value);
+    let sequenciaFibonacci = [numero1, numero2];
 
     while (numero2 < numeroEscolhido) {
         let numeroTemporario = numero2;
         numero2 = numero1 + numero2;
         numero1 = numeroTemporario;
+        sequenciaFibonacci.push(numero2);
     }
 
-    if (numeroEscolhido === "") {
-        console.log("Questão 2 - nenhum número foi digitado!");
+    const pertenceASequencia = sequenciaFibonacci.includes(numeroEscolhido);
 
-        resposta = "Questão 2 - nenhum número foi digitado!";
-    } else if (numero2 === numeroEscolhido) {
-        console.log(`Questão 2 - o número ${numeroEscolhido} pertence à sequência de Fibonacci.`);
+    let resposta = Number.isNaN(numeroEscolhido)
+        ? `Questão 2 - Nenhum número foi digitado!`
+        : pertenceASequencia
+            ? `Questão 2 - O número ${numeroEscolhido} pertence à sequência de Fibonacci.`
+            : `Questão 2 - O número ${numeroEscolhido} não pertence à sequência de Fibonacci.`;
 
-        resposta = `Questão 2 - o número ${numeroEscolhido} pertence à sequência de Fibonacci.`;
-    } else {
-        console.log(`Questão 2 - o número ${numeroEscolhido} não pertence à sequência de Fibonacci.`);
-
-        resposta = `Questão 2 - o número ${numeroEscolhido} não pertence à sequência de Fibonacci.`;
-    }
-
+console.log("FSAFA" + resposta, numeroEscolhido);
     document.getElementById('resultado').textContent = resposta;
 }
 
