@@ -49,7 +49,6 @@ function questao2() {
             ? `Questão 2 - O número ${numeroEscolhido} pertence à sequência de Fibonacci.`
             : `Questão 2 - O número ${numeroEscolhido} não pertence à sequência de Fibonacci.`;
 
-console.log("FSAFA" + resposta, numeroEscolhido);
     document.getElementById('resultado').textContent = resposta;
 }
 
